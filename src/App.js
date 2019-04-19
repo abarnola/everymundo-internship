@@ -1,28 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.jpg';
+import Routes from './routes';
+import {BrowserRouter, Redirect} from 'react-router-dom';
+import {Navbar} from 'react-bootstrap'
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <div className="App">
+        <BrowserRouter>
+          <header className="App-header">
+            <Navbar bg="light" expand="lg">
+              <Navbar.Brand href="/"> <img src={logo} alt="everymundo logo" className="header-logo" /></Navbar.Brand>
+            </Navbar>
+            <Routes />
+          </header>
+        </BrowserRouter>
+        </div>
+        <footer style={bottomView}>
+              <h4 style={{textAlign: 'center'}}>Alejandro Barnola, 2019</h4>
+        </footer>
       </div>
     );
   }
+}
+
+const bottomView = {
+  width: '100%', 
+  height: '2.5rem', 
+  justifyContent: 'center', 
+  alignItems: 'center',
+  position: 'absolute',
+  bottom: 0
 }
 
 export default App;
