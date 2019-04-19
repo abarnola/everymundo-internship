@@ -160,8 +160,8 @@ class IndexPage extends React.Component {
                     {this.addCarouselItems(this.state.popflights)}
                 </Carousel>
 
-                {/* Modal that shows if this.state.showModal. Organized in two Cols of three Rows each. onSubmit calls
-                    handleSubmit which will*/}
+                {/* Modal that shows if this.state.showModal. Organized in two Cols of three Rows each. Doesn't have an
+                    onSubmit, that's handled by the Search Flights button*/}
                 <Modal show={this.state.showModal} onHide={this.handleModalClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>Flight Search</Modal.Title>

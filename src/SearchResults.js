@@ -28,25 +28,6 @@ class SearchResults extends React.Component {
         return cards
     }
 
-    dummyAddCards = () => {
-        const cards = this.state.flight.map(item => 
-            <Card>
-                <Card.Body>
-                    <Row>
-                        <Card.Title style={{marginLeft: 50 }}>MIA-LAS</Card.Title>
-                        <p style={{marginLeft: 100}}>Economy</p>
-                        <p style={{marginLeft: 50}}>Departure Time: HH:MM</p>
-                        <p style={{marginLeft: 100}}>Arrival Time: HH:MM</p>
-                        <p style={{marginLeft: 100}}>Starting Price: </p>
-                        <p style={{marginLeft: 50}}>50</p>
-                        
-                    </Row>
-                </Card.Body>
-            </Card>
-        )
-        return cards
-    }
-
     render() {
         return (
             <div style={{alignContent: "center"}}>

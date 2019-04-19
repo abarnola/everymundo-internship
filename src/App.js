@@ -6,6 +6,7 @@ import {Navbar} from 'react-bootstrap'
 
 class App extends Component {
 
+  //Empty Navbar and simple Footer
   render() {
     return (
       <div>
